@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4 KAGE STICKER STUDIO</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#0a3d2e;font-family:Arial,sans-serif;padding:10px}
+.wrap{background:#f5f0dc;border-radius:20px;padding:15px;max-width:700px;margin:auto}
+.badge{background:#f5eeda;border:2px solid #d8cfa8;border-radius:20px;padding:6px 12px;font-weight:bold;letter-spacing:2px;font-size:12px;display:inline-block}
+.logoBox{background:#0a3d2e;border-radius:18px;padding:18px 10px;text-align:center;margin:12px 0;border:3px solid #d9b84a}
+.logoBig{font-size:52px;font-weight:900;letter-spacing:2px;color:#fff;line-height:1;text-shadow:0 0 0 #000, 3px 3px 0 #d9b84a}
+.logoBig span{color:#ffde59} .ninja{font-size:36px;letter-spacing:8px}
+.logoSub{color:#b6ff7a;font-weight:bold;letter-spacing:4px;margin-top:6px;font-size:13px}
+h1{font-size:28px;line-height:1;margin:10px 0 5px;color:#0a2e22}
+p{color:#3a4a3a} .tabs{display:flex;gap:5px;background:#f5eeda;padding:5px;border-radius:20px}
+.tabs button{flex:1;padding:12px;border:none;border-radius:15px;font-weight:bold;cursor:pointer;background:#f5eeda}
+.tabs button.on{background:#0a3d2e;color:white}
+.tools{background:#d9e0c8;border-radius:15px;text-align:center;padding:12px;font-weight:bold;margin-top:10px}
+.steps{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}
+.steps div{background:white;border-radius:25px;padding:8px 14px;font-weight:bold}
+.steps span{background:#0a3d2e;color:white;border-radius:50%;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;margin-right:5px}
+.setup{display:flex;gap:8px;align-items:center} .setup button{padding:12px 20px;border-radius:25px;border:2px solid #0a3d2e;font-weight:bold;cursor:pointer}
+.setup .on{background:#0a3d2e;color:white} .info{background:#f9eecb;border-left:5px solid #d9b84a;padding:12px;border-radius:8px;margin:12px 0}
+.upload{border:2px dashed #0a3d2e;border-radius:15px;padding:20px;text-align:center;background:#fffdf0;cursor:pointer;margin:12px 0}
+.shapeBtn{padding:10px 14px;border-radius:12px;border:2px solid #c9c0a0;background:#f5eeda;font-weight:bold;margin:4px;cursor:pointer}
+.shapeBtn.on{background:#0a3d2e;color:white} .sizeBtn{padding:10px 14px;border-radius:12px;border:2px solid #c9c0a0;background:#f5eeda;margin:3px;cursor:pointer}
+.sizeBtn.on{background:#0a3d2e;color:white}
+input{width:100%;padding:12px;border-radius:12px;border:1px solid #c9c0a0;margin:6px 0;font-size:16px}
+.previewBox{background:white;border-radius:12px;padding:15px;min-height:200px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:10px 0;overflow:hidden}
+.stk{overflow:hidden;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.2);background:#eee;display:flex;align-items:center;justify-content:center}
+.stk img{width:100%;height:100%;object-fit:cover}
+.ctrl{display:flex;justify-content:center;gap:6px;flex-wrap:wrap} .ctrl button{padding:10px 14px;border-radius:12px;border:2px solid #c9c0a0;background:#f5eeda;font-weight:bold}
+.exportBtn{background:#0a3d2e;color:white;width:100%;padding:15px;border:none;border-radius:15px;font-size:17px;font-weight:bold;margin-top:10px;cursor:pointer}
+.checker{background-image:linear-gradient(45deg,#ccc 25%,transparent 25%),linear-gradient(-45deg,#ccc 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ccc 75%),linear-gradient(-45deg,transparent 75%,#ccc 75%);background-size:20px 20px;background-position:0 0,0 10px,10px -10px,-10px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<span class="badge">OFFLINE CREATIVE STUDIO • 4 KAGE</span>
+
+<!-- LOGO 4 KAGE -->
+<div class="logoBox">
+<div class="ninja">🥷 🥷 🥷 🥷</div>
+<div class="logoBig">4 <span>KAGE</span></div>
+<div class="logoSub">★ STICKER STUDIO ★</div>
+</div>
+
+<p style="text-align:center">Edit artwork, arrange sticker sheets, and prepare print-ready files. All processing happens on your device.</p>
+
+<div class="tabs">
+<button class="on" onclick="tab(this)">Sticker Sheet</button>
+<button onclick="tab(this)">Layout Bebas</button>
+<button onclick="tab(this)">Color Studio</button>
+</div>
+<div class="tools">More tools ∨</div>
+
+<div class="steps"><div><span>1</span> Upload artwork</div><div><span>2</span> Shape & size</div><div><span>3</span> Preview & export</div></div>
+
+<div class="setup"><b>SETUP</b><button class="on">Quick setup</button><button>All settings</button></div>
+<div class="info">Upload artwork, set each sticker's shape, size and position, choose paper or a print preset, then review and export. Fine controls stay in All settings.</div>
+<div class="info" style="background:white;border:none"><b>▶ Bingung dengan istilah Sticker Sheet? Buka penjelasan</b></div>
+
+<div class="upload" onclick="document.getElementById('f').click()">
+<b style="font-size:18px">❶ Choose artwork <span style="font-weight:normal">(multiple files supported)</span></b><br>
+PNG / JPG / WebP / GIF / BMP / AVIF / SVG · files are processed on your device
+<input type="file" id="f" accept="image/*" multiple hidden>
+</div>
+
+<h3>❷ Choose Shape and Size</h3>
+<p>Sticker shape</p>
+<div id="shapes">
+<button class="shapeBtn on" onclick="setShape('original',this)">Original shape</button>
+<button class="shapeBtn" onclick="setShape('circle',this)">Circle</button>
+<button class="shapeBtn" onclick="setShape('square',this)">Square</button>
+<button class="shapeBtn" onclick="setShape('rectangle',this)">Rectangle</button>
+<button class="shapeBtn" onclick="setShape('rounded',this)">Rounded rectangle</button>
+<button class="shapeBtn" onclick="setShape('oval',this)">Oval</button>
+<button class="shapeBtn" onclick="setShape('hexagon',this)">Hexagon</button>
+</div>
+
+<p>Longest sticker side (mm)</p>
+<div id="sizes">
+<button class="sizeBtn" onclick="setSize(10,this)">10</button>
+<button class="sizeBtn on" onclick="setSize(16,this)">16</button>
+<button class="sizeBtn" onclick="setSize(20,this)">20</button>
+<button class="sizeBtn" onclick="setSize(25,this)">25</button>
+<button class="sizeBtn" onclick="setSize(30,this)">30</button>
+<button class="sizeBtn" onclick="setSize(40,this)">40</button>
+<button class="sizeBtn" onclick="setSize(50,this)">50</button>
+</div>
+<p>Or enter a custom size (mm)</p><input id="custom" value="16" type="number">
+<p>Sticker height (mm)</p><input id="h" value="16" type="number">
+
+<p>Position selected artwork inside the sticker</p>
+<div class="previewBox checker" id="previewBox" style="min-height:280px"><p style="color:#888">Upload gambar dulu. Preview akan muncul disini.</p></div>
+<p style="text-align:center;font-size:13px">Drag the image in the preview or use the arrow buttons.<br>Up to 294 stickers fit on one sheet.</p>
+
+<div class="ctrl"><button onclick="move(0,-10)">Up</button></div>
+<div class="ctrl"><button onclick="move(-10,0)">Left</button><button onclick="move(0,0)">Center</button><button onclick="move(10,0)">Right</button></div>
+<div class="ctrl"><button onclick="move(0,10)">Down</button></div>
+<div class="ctrl" style="margin-top:8px"><button onclick="zoom(-10)">Zoom out</button><button onclick="zoom(10)">Zoom in</button><button onclick="zoom(0)">Fit</button></div>
+
+<p>Paper size</p>
+<div style="display:flex;gap:8px">
+<button class="shapeBtn" style="flex:1" onclick="paper('A4',this)">A4 · 210 x 297 mm</button>
+<button class="shapeBtn on" style="flex:1" onclick="paper('A3',this)">A3 · 297 x 420 mm</button>
+</div>
+
+<h3>❸ Preview & Export</h3>
+<div class="previewBox" id="sheet" style="background:white"></div>
+<button class="exportBtn" onclick="download()">⬇ EXPORT JADI GAMBAR PNG - SIAP PRINT</button>
+<p style="text-align:center;font-size:12px;font-weight:bold">🔥 4 KAGE - STICKER STUDIO 🔥</p>
+</div>
+
+<script>
+let shape='original', sizeMM=16, imgs=[], offX=0, offY=0, zoomV=100, paperSize='A3';
+function tab(el){document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('on')); el.classList.add('on');}
+function setShape(s,el){shape=s; document.querySelectorAll('#shapes button').forEach(b=>b.classList.remove('on')); el.classList.add('on'); render();}
+function setSize(s,el){sizeMM=s; document.getElementById('custom').value=s; document.querySelectorAll('#sizes button').forEach(b=>b.classList.remove('on')); el.classList.add('on'); render();}
+function paper(p,el){paperSize=p; document.querySelectorAll('.shapeBtn').forEach(b=>{if(b.textContent.includes('A4')||b.textContent.includes('A3')) b.classList.remove('on')}); el.classList.add('on');}
+function move(x,y){offX+=x; offY+=y; render();}
+function zoom(v){ if(v==0) zoomV=100; else zoomV+=v; render();}
+document.getElementById('f').addEventListener('change',e=>{ [...e.target.files].forEach(f=>{let r=new FileReader(); r.onload=ev=>{imgs.push(ev.target.result); render();}; r.readAsDataURL(f);});});
+function render(){
+  let box=document.getElementById('previewBox'); let sheet=document.getElementById('sheet');
+  if(!imgs.length) return; box.innerHTML=''; sheet.innerHTML='';
+  let px=sizeMM*4;
+  imgs.forEach(src=>{
+    let d=document.createElement('div'); d.className='stk'; d.style.width=px+'px'; d.style.height=px+'px';
+    if(shape=='circle') d.style.borderRadius='50%';
+    if(shape=='oval') d.style.borderRadius='50% / 35%';
+    if(shape=='rounded') d.style.borderRadius='18px';
+    if(shape=='hexagon') d.style.clipPath='polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%)';
+    d.innerHTML=`<img src="${src}" style="transform:translate(${offX}px,${offY}px) scale(${zoomV/100})">`;
+    box.appendChild(d); let d2=d.cloneNode(true); sheet.appendChild(d2);
+  });
+}
+function download(){
+  if(!imgs.length) return alert('Upload gambar dulu!');
+  let c=document.createElement('canvas'); c.width=paperSize=='A4'?800:1100; c.height=1100; let ctx=c.getContext('2d'); ctx.fillStyle='white'; ctx.fillRect(0,0,c.width,c.height);
+  let sz=sizeMM*4+20, x=20,y=20, loaded=0;
+  imgs.forEach(src=>{ let im=new Image(); im.onload=()=>{ ctx.save(); if(shape=='circle'){ctx.beginPath(); ctx.arc(x+sz/2,y+sz/2,sz/2,0,Math.PI*2); ctx.clip();} ctx.drawImage(im,x,y,sz,sz); ctx.restore(); x+=sz+10; if(x+sz>c.width-20){x=20; y+=sz+10;} loaded++; if(loaded==imgs.length){let a=document.createElement('a'); a.download='4kage-sticker.png'; a.href=c.toDataURL(); a.click();} }; im.src=src; });
+}
+</script>
+</body>
+</html>
